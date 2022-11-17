@@ -1,0 +1,14 @@
+*.pyc
+*.pyo
+*.orig
+*.bak
+*~
+tmp/
+__pycache__/
+version.py
+
+/build
+/dist
+
+/.coverage
+/htmlcov/
