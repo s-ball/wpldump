@@ -31,7 +31,7 @@ Contributions are welcome, including issues on GitHub.
 Problems are expected to be documented so that they can be reproduced. But
 I only develop this on my free time, so I cannot guarantee quick answers...
 
-## Disclaimer: pre-alpha quality
+## Disclaimer: alpha quality
 
 This is currently a *work in progress*
 

@@ -6,6 +6,7 @@
 tmp/
 __pycache__/
 version.py
+*.egg-info/
 
 /build
 /dist

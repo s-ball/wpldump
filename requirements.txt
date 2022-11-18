@@ -1,1 +1,1 @@
-PyWave=0.5
+PyWave>=0.5
