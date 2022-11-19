@@ -10,11 +10,18 @@ PyWave.clstr = lambda bytes_: bytes_.replace(b'\x00', b'')
 
 
 def cmd_parse(*args):
-    parser = argparse.ArgumentParser(description='Automatic dump of a playlist.')
-    parser.add_argument('-d', '--dir', help='Process a directory instead of a playlist', action='store_true')
-    parser.add_argument('infile', help='input file (expected to be a wpl playlist file or a folder)')
-    parser.add_argument('outfile', nargs='?', default=None, help='output file (default=standard output)')
-    parser.add_argument('-s', '--sep', help='Separator between name and duration (default \\t)')
+    parser = argparse.ArgumentParser(description=
+                                     'Automatic dump of a playlist.')
+    parser.add_argument('-d', '--dir',
+                        help='Process a directory instead of a playlist',
+                        action='store_true')
+    parser.add_argument('infile', help='input file (expected to be a wpl '
+                                       'playlist file or a folder)')
+    parser.add_argument('outfile', nargs='?', default=None,
+                        help='output file (default=standard output)')
+    parser.add_argument('-s', '--sep', default='\t',
+                        help='Separator between name and duration '
+                             '(default \\t)')
     return parser.parse_args(args)
 
 
@@ -33,7 +40,8 @@ def wav_data(file: str) -> Tuple[str, int]:
 
 
 class WplParser:
-    def __init__(self, infile: str, outfile: str = None, in_dir: bool = False, sep: str = '\t'):
+    def __init__(self, infile: str, outfile: str = None,
+                 in_dir: bool = False, sep: str = '\t'):
         self.infile = infile
         self.outfile = outfile
         self.in_dir = in_dir
